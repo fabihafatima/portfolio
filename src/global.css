@@ -6,6 +6,8 @@
 body {
   @apply leading-[normal] m-0;
   background-color: rgb(215, 209, 235); /* Adds beige background */
+  font-family: Inter, ui-sans-serif, system-ui;
+
 }
 
 *,

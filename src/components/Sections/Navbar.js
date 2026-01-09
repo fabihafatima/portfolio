@@ -58,10 +58,12 @@ const Navbar = () => {
       anchor.scrollIntoView({ block: "start", behavior: "smooth" });
     }
   }, []);
-
   const onResumeClick = useCallback(() => {
-    window.open("https://drive.google.com/file/d/1I0us-l4mATrCM5lPiEk1OmTbbkrQ5Fjq/view?usp=sharing");
-  }, []);
+  const url = `${process.env.PUBLIC_URL}/resume.pdf`;
+  window.open(url, "_blank", "noopener,noreferrer");
+}, []);
+
+
 
   return (
     // <header className="self-stretch overflow-hidden flex flex-row items-center justify-center py-6 px-20 box-border max-w-full mq825:pl-10 mq825:pr-10 mq825:box-border">

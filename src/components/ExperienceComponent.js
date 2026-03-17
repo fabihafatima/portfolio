@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 // export default ExperienceComponent;
-const ExperienceComponent = ({ Title, Date, Text1, Text2 }) => {
+const ExperienceComponent = ({ Title, Date, Text1, Text2, Text3, Text4, Text5 }) => {
   useEffect(() => {
     const scrollAnimElements = document.querySelectorAll(
       "[data-animate-on-scroll]"
@@ -32,6 +32,8 @@ const ExperienceComponent = ({ Title, Date, Text1, Text2 }) => {
     };
   }, []);
 
+  const lines = [Text1, Text2, Text3, Text4, Text5].filter(Boolean);
+
   return (
     <div
       className="self-stretch rounded-3xs box-border flex flex-col items-start justify-start py-[30px] pr-[25px] pl-[23px] gap-[28px] [&.animate]:animate-[1s_ease_0s_1_normal_forwards_fade-in-top] opacity-[0] max-w-full text-center text-5xl text-primary-white font-heading-h6-semibold border-[1px] border-solid border-zinc-500"
@@ -48,8 +50,13 @@ const ExperienceComponent = ({ Title, Date, Text1, Text2 }) => {
         </div>
       </div>
       <div className="self-stretch relative text-base tracking-[0.02em] leading-[24px] text-zinc-300 text-left">
-        {Text1 && <p className="m-0" dangerouslySetInnerHTML={{ __html: Text1 }}></p>}
-        {Text2 && <p className="m-0" dangerouslySetInnerHTML={{ __html: Text2 }}></p>}
+        {lines.map((line, idx) => (
+          <p
+            key={`${Title}-${Date}-${idx}`}
+            className="m-0"
+            dangerouslySetInnerHTML={{ __html: line }}
+          />
+        ))}
       </div>
     </div>
   );

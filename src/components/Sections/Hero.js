@@ -116,14 +116,16 @@ const Hero = () => {
                 </div>
               </div>
               <div
-                className="self-stretch relative text-base tracking-[0.02em] leading-[24px] text-zinc-500 [&.animate]:animate-[1s_ease_0s_1_normal_forwards_fade-in-top] opacity-[0]"
+                className="self-stretch relative text-[17px] tracking-[0.01em] leading-[28px] text-zinc-600 font-sans [&.animate]:animate-[1s_ease_0s_1_normal_forwards_fade-in-top] opacity-[0]"
                 data-animate-on-scroll
               >
-                <h3 className="m-0">{`Currently pursuing a Master’s in Computer Science from the University of Massachusetts, Amherst. `}</h3>
-                <h3 className="m-0">
-                I am an enthusiastic full-stack developer with over three years of experience at Cisco Systems.
-                I quickly learn new skills, adapt to emerging technologies, enjoy problem-solving, and am self-motivated to take on professional challenges.
-                </h3>
+                <p className="m-0 font-medium text-zinc-700">
+                  {`Currently pursuing a Master’s in Computer Science from the University of Massachusetts, Amherst.`}
+                </p>
+                <p className="m-0 mt-2">
+                  I am an enthusiastic full-stack developer with over three years of experience at Cisco Systems.
+                  I quickly learn new skills, adapt to emerging technologies, enjoy problem-solving, and am self-motivated to take on professional challenges.
+                </p>
               </div>
             </div>
             <div

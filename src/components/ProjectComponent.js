@@ -39,27 +39,35 @@ const ProjectComponent = ({
   }, []);
 
   const onImageContainerClick = useCallback(() => {
+    if (!ImageLink) return;
     window.open(ImageLink);
-  }, []);
+  }, [ImageLink]);
 
   return (
     <div
       className={`self-stretch overflow-hidden flex flex-row items-center justify-center py-5 px-0 box-border gap-[40px] [&.animate]:animate-[1s_ease_0s_1_normal_forwards_fade-in-left] opacity-[0] max-w-full text-left text-29xl text-primary-white font-heading-h6-semibold mq825:gap-[20px] mq1425:flex-wrap`}
       data-animate-on-scroll
     >
-      <div
-        className="w-[594px] h-[476px] overflow-hidden shrink-0 flex flex-row items-center justify-center min-w-[594px] max-w-full cursor-pointer lg:min-w-full mq1425:flex-1"
-        onClick={onImageContainerClick}
-      >
-        <div className="relative rounded-[18.76px] w-[530px] h-[397.7px] flex items-center justify-center">
-          <img
-            className="w-full h-full max-w-full object-contain absolute left-[0px] top-[12px] [transform:scale(1.191)] mq1425:flex-1"
-            loading="eager"
-            alt=""
-            src={Image}
-          />
+      {Image ? (
+        <div
+          className="w-[594px] h-[476px] overflow-hidden shrink-0 flex flex-row items-center justify-center min-w-[594px] max-w-full cursor-pointer lg:min-w-full mq1425:flex-1"
+          onClick={onImageContainerClick}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") onImageContainerClick();
+          }}
+        >
+          <div className="relative rounded-[18.76px] w-[530px] h-[397.7px] overflow-hidden bg-primary-black/10 flex items-center justify-center">
+            <img
+              className="w-full h-full object-contain p-3"
+              loading="eager"
+              alt={`${Title} preview`}
+              src={Image}
+            />
+          </div>
         </div>
-      </div>
+      ) : null}
       <div className="flex-1 overflow-hidden flex flex-col items-start justify-center min-w-[378px] max-w-full mq825:min-w-full">
         <div className="self-stretch flex flex-col items-start justify-start gap-[28px]">
           <div className="self-stretch relative tracking-[-0.02em] leading-[56px] font-extrabold mq825:text-19xl mq825:leading-[45px] mq450:text-10xl mq450:leading-[34px]">
@@ -75,7 +83,7 @@ const ProjectComponent = ({
           <img
             className="relative w-5 h-5 cursor-pointer"
             alt=""
-            src="/read-more.svg"
+            src={`${process.env.PUBLIC_URL}/read-more.svg`}
             onClick={onImageContainerClick}
           />
         </div>

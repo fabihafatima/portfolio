@@ -51,6 +51,17 @@ const Experience = () => {
         <div className="self-stretch overflow-hidden flex flex-col items-start justify-start py-10 px-6 box-border gap-[32px] max-w-full text-center text-5xl mq825:gap-[16px] mq825:pt-5 mq825:pb-5 mq450:pl-0 mq450:pr-0 mq825:box-border mq1425:pt-[26px] mq1425:pb-[26px] mq1425:box-border">
           
           <ExperienceComponent
+            Title="Graduate Research Extern @ Graphite"
+            Date="January 2026 – Present"
+            Text1="Designed and implemented a configurable LLM experimentation pipeline for Retrieval-Augmented Generation (RAG) to evaluate how AI-generated content affects retrieval quality and answer reliability."
+            Text2="Evaluating mitigation strategies including retrieval diversification, controlled sampling, and retrieval filtering to improve robustness of LLM-based search systems."
+          />
+          <ExperienceComponent
+            Title="Student Researcher @ W. E. B. Du Bois Library Data Services"
+            Date="March 2025 – Present"
+            Text1="Engineered a Python-based spatial data pipeline to extract and compute bounding boxes for research geospatial datasets, transforming records into GeoBlacklight-compliant JSON and publishing structured metadata to the UMass geospatial portal."
+          />
+          <ExperienceComponent
             Title="Cisco Software Engineer II @ Cisco Systems"
             Date="November 2022  – August 2024"
             Text1="Developed a full-stack observability web solution in JavaScript, that integrates infrastructure, application, and network monitoring. Achieved 95% operational efficiency, processing 1.09 billion data points daily for 525 business applications, 20,000 application endpoints, and 57,000 hosts."

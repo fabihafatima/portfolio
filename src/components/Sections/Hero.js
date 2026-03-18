@@ -112,11 +112,12 @@ const Hero = () => {
                 className="self-stretch relative text-[17px] tracking-[0.01em] leading-[30px] text-zinc-600 font-sans max-w-[72ch] [&.animate]:animate-[1s_ease_0s_1_normal_forwards_fade-in-top] opacity-[0]"
                 data-animate-on-scroll
               >
-                <p className="m-0 font-medium text-zinc-800">
-                  I am a full-stack developer with 3+ years of production
-                  experience at Cisco Systems, where I built and scaled
-                  observability solutions across infrastructure, applications,
-                  and networks, processing billions of data points daily.
+               
+                <p className="m-0 mt-3">
+                I am a Full-stack developer with 3+ years of experience at Cisco Systems,
+                building scalable observability platforms for infrastructure, application, and network monitoring. 
+                My work processes billions of data points daily, enabling real-time insights, performance optimization, 
+                and system reliability at scale
                 </p>
                 <p className="m-0 mt-3">
                   Now, as an <b>M.S. Computer Science</b> student at <b>UMass Amherst</b> and

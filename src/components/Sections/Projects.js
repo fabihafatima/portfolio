@@ -2,43 +2,41 @@ import { useEffect } from "react";
 import ProjectComponent from "../ProjectComponent";
 
 const Projects = () => {
-    useEffect(() => {
-        const scrollAnimElements = document.querySelectorAll(
-          "[data-animate-on-scroll]"
-        );
-        const observer = new IntersectionObserver(
-          (entries) => {
-            for (const entry of entries) {
-              if (entry.isIntersecting || entry.intersectionRatio > 0) {
-                const targetElement = entry.target;
-                targetElement.classList.add("animate");
-                observer.unobserve(targetElement);
-              }
-            }
-          },
-          {
-            threshold: 0.15,
+  useEffect(() => {
+    const scrollAnimElements = document.querySelectorAll(
+      "[data-animate-on-scroll]"
+    );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting || entry.intersectionRatio > 0) {
+            const targetElement = entry.target;
+            targetElement.classList.add("animate");
+            observer.unobserve(targetElement);
           }
-        );
-    
-        for (let i = 0; i < scrollAnimElements.length; i++) {
-          observer.observe(scrollAnimElements[i]);
         }
-    
-        return () => {
-          for (let i = 0; i < scrollAnimElements.length; i++) {
-            observer.unobserve(scrollAnimElements[i]);
-          }
-        };
-      }, []);
+      },
+      {
+        threshold: 0.15,
+      }
+    );
 
+    for (let i = 0; i < scrollAnimElements.length; i++) {
+      observer.observe(scrollAnimElements[i]);
+    }
 
-    
-    return (
-        <section
-        className="self-stretch bg-primary-black overflow-hidden flex flex-col items-start justify-start py-[60px] pr-[97px] pl-20 box-border max-w-full text-left text-29xl text-primary-white font-heading-h6-semibold lg:pt-[25px] lg:pb-[25px] lg:box-border mq825:py-5 mq825:pr-12 mq825:pl-10 mq825:box-border mq450:pr-5 mq450:box-border mq1425:pt-[39px] mq1425:pb-[39px] mq1425:box-border"
-        data-scroll-to="project"
-      >
+    return () => {
+      for (let i = 0; i < scrollAnimElements.length; i++) {
+        observer.unobserve(scrollAnimElements[i]);
+      }
+    };
+  }, []);
+
+  return (
+    <section
+      className="self-stretch bg-primary-black overflow-hidden flex flex-col items-start justify-start py-[60px] pr-[97px] pl-20 box-border max-w-full text-left text-29xl text-primary-white font-heading-h6-semibold lg:pt-[25px] lg:pb-[25px] lg:box-border mq825:py-5 mq825:pr-12 mq825:pl-10 mq825:box-border mq450:pr-5 mq450:box-border mq1425:pt-[39px] mq1425:pb-[39px] mq1425:box-border"
+      data-scroll-to="project"
+    >
         <div className="self-stretch overflow-hidden flex flex-col items-start justify-start py-0 px-8 box-border gap-[20px] max-w-full">
           <div
             className="self-stretch overflow-hidden flex flex-row items-center justify-center py-5 px-0 gap-[16px] [&.animate]:animate-[1s_ease_0s_1_normal_forwards_fade-in-top] opacity-[0] mq450:flex-wrap"
@@ -91,6 +89,18 @@ const Projects = () => {
             />
         </div>
       </section>
-    )};
+  )};
 
-    export default Projects;
+// Previous pinboard-style Projects section (kept for reference)
+// const ProjectsPinboard = () => {
+//   const projects = useMemo(() => {
+//     const items = [ ... ];
+//     return items.map((p, idx) => ({
+//       ...p,
+//       rotation: ((idx * 11) % 9) - 4,
+//     }));
+//   }, []);
+//   ...
+// };
+
+export default Projects;

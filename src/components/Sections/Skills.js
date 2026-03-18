@@ -121,7 +121,10 @@ const Skills = () => {
         { label: "JavaScript", src: `${process.env.PUBLIC_URL}/iconjavscript.svg` },
         { label: "C++", src: `${process.env.PUBLIC_URL}/cpluslogo.png` },
         { label: "SQL", src: `${process.env.PUBLIC_URL}/sqllogo.png` },
-        { label: "Bash", src: `${process.env.PUBLIC_URL}/bash.png` },
+        {
+          label: "Bash",
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg",
+        },
       ],
     },
     {

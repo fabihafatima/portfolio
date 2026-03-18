@@ -50,6 +50,11 @@ To set up the portfolio on your local machine:
    ```
    The portfolio will be available at `http://localhost:3000/portfolio`.
 
+5. Deploy the code:
+   ```bash
+      npm run deploy
+   ```
+
 ## Contributions
 Contributions are welcome! Feel free to fork the repository, make improvements, and submit a pull request. Any enhancements to improve the portfolio are greatly appreciated.
 

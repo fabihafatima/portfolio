@@ -52,7 +52,7 @@ To set up the portfolio on your local machine:
 
 5. Deploy the code:
    ```bash
-      npm run deploy
+   npm run deploy
    ```
 
 ## Contributions

@@ -50,8 +50,16 @@ const Projects = () => {
             </h1>
           </div>
           <ProjectComponent
-            Image={`${process.env.PUBLIC_URL}/umate.jpg`}
+            Image={`${process.env.PUBLIC_URL}/query-product-relevance.png`}
             Number="01"
+            Title="Query-Product Relevance & Sponsored Search"
+            ImageLink="https://github.com/fabihafatima/query-product-relevance"
+            Text1="Developed a hybrid BM25 and dense-retrieval (Sentence-BERT/E5) search pipeline with FAISS ANN indexing and cross-encoder re-ranking, processing 1M+ query-product pairs."
+            Text2="Trained a LightGBM LambdaRank learning-to-rank model on retrieval, popularity, and CTR features, improving nDCG@10 by 14% and MRR by 11% over a BM25 baseline."
+          />
+          <ProjectComponent
+            Image={`${process.env.PUBLIC_URL}/umate.jpg`}
+            Number="02"
             Title="UMate: Bumble for Roommates"
             ImageLink="https://github.com/fabihafatima/UMateFinder"
             Text1="Developed a roommate-finding application in Python with an interactive React frontend with a recommendation algorithm to enhance user compatibility utilized MongoDB for scalable data management and AWS S3 for cloud storage"
@@ -59,7 +67,7 @@ const Projects = () => {
           />
           <ProjectComponent
             Image={`${process.env.PUBLIC_URL}/TravelPlanner.jpeg`}
-            Number="02"
+            Number="03"
             Title="Travel Planner"
             ImageLink="https://github.com/fabihafatima/travel-planner"
             Text1="Developed an AI-driven travel planner using Python, React, and Java Spring Boot to curate personalized itineraries, suggest destinations based on user moods, and generate packing checklists."
@@ -67,21 +75,21 @@ const Projects = () => {
           />
           <ProjectComponent
             Image={`${process.env.PUBLIC_URL}/fraudSpark.png`}
-            Number="03"
+            Number="04"
             Title="FraudSpark: Real-Time Fraud Detection System"
             ImageLink="https://github.com/fabihafatima/FraudSpark-Real-Time-Fraud-Detection-System-"
             Text1="Built a distributed fraud detection system with Random Forest Classifier, optimized for imbalanced datasets and leveraged Kafka for real-time data streaming and PySpark for scalable processing"
           />
           <ProjectComponent
             Image={`${process.env.PUBLIC_URL}/llm.png`}
-            Number="04"
+            Number="05"
             Title="LLMs to the Rescue "
             ImageLink="https://github.com/fabihafatima/llms-to-the-rescue"
             Text1="Addressed class imbalance in text classification by leveraging Large Language Model (Llama-3.2) for data augmentation through style transfer using Python and synthetically enriched underrepresented classes"
           />
           <ProjectComponent
             Image={`${process.env.PUBLIC_URL}/spede.jpg`}
-            Number="05"
+            Number="06"
             Title="Spede: Detecting Emotions from Speech using Deep Learning"
             ImageLink="https://github.com/fabihafatima/Speech-Emotion-Detector-using-Deep-Learning"
             Text1="Spede is a Python-based application with a simple intuitive interface that utilizes machine learning and deep learning techniques to detect emotions in speech or songs from uploaded WAV files, identifying eight emotions: happy, sad, neutral, anger, disgust, calm, surprised, and fearful."

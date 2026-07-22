@@ -34,16 +34,18 @@ const Experience = () => {
 
   const entries = [
     {
-      title: "Graduate Research Extern @ Graphite",
-      date: "January 2026 – Present",
+      title: "Graduate Research Intern (AI Engineer) @ Graphite",
+      date: "January 2026 – June 2026",
       text1:
-        "Designed and implemented a configurable LLM experimentation pipeline for Retrieval-Augmented Generation (RAG) to evaluate how AI-generated content affects retrieval quality and answer reliability.",
+        "Investigated inference-time RAG collapse from AI-generated content; built 3 contamination simulation pipelines across 4 LLM families revealing 73% entity and 45% lexical diversity loss.",
       text2:
-        "Evaluating mitigation strategies including retrieval diversification, controlled sampling, and retrieval filtering to improve robustness of LLM-based search systems.",
+        "Engineered a production agentic RAG harness with tool-calling retrieval and guardrails; cut end-of-loop answer collapse to 27.2% vs. 48–67% across baseline strategies.",
+      text3:
+        'Evaluated 4 mitigation strategies - paraphrasing, prompt optimization, re-ranking, agentic retrieval. Co-authored <a href="https://openreview.net/forum?id=JHwIkYmtxb" target="_blank" rel="noopener noreferrer" style="color: #D7D1EB; text-decoration: underline;">“Does RAG Collapse When It Retrieves AI-Generated Documents?”</a>, submitted to EMNLP 2026 Workshop (GroundLM).',
     },
     {
       title: "Student Researcher @ W. E. B. Du Bois Library Data Services",
-      date: "March 2025 – Present",
+      date: "March 2025 – May 2026",
       text1:
         "Engineered a Python-based spatial data pipeline to extract and compute bounding boxes for research geospatial datasets, transforming records into GeoBlacklight-compliant JSON and publishing structured metadata to the UMass geospatial portal.",
     },
@@ -129,6 +131,8 @@ const Experience = () => {
                     Text1={entry.text1}
                     Text2={entry.text2}
                     Text3={entry.text3}
+                    Text4={entry.text4}
+                    Text5={entry.text5}
                   />
                 </div>
               </div>
@@ -141,51 +145,3 @@ const Experience = () => {
 };
 
 export default Experience;
-
-// import React from "react";
-// import experiences from "../experiences.json";
-// import SectionHeading from "./SectionHeading";
-// import TimelineItem from "./TimelineItem";
-
-// const Experience = ({ experienceRef }) => {
-//   return (
-    
-//     // <section
-//     //   className="bg-lightTertiaryColor text-lightText dark:bg-darkTertiaryColor dark:text-darkText theme-transition"
-//     //   ref={experienceRef}
-//     // >
-//       <section
-//       className="self-stretch bg-primary-black overflow-hidden flex flex-row items-start justify-start py-[60px] pr-[97px] pl-20 box-border max-w-full text-left text-29xl text-primary-white font-heading-h6-semibold mq825:py-[25px] mq825:pr-12 mq825:pl-10 mq825:box-border mq450:pt-5 mq450:pr-0 mq450:pl-0 mq450:pb-5 mq450:box-border mq1425:pt-[39px] mq1425:pb-[39px] mq1425:box-border"
-//       data-scroll-to="experience"
-//       >
-//       <div className="relative bg-[#e8d1c0] dark:bg-[#3d2b1f] p-4 md:p-12 rounded-lg shadow-inner text-lightText dark:text-darkText">
-//         {/* Background patterns remain the same */}
-
-         
-//         <div className="max-w-6xl mx-auto p-4 md:p-8">
-//           <div className="relative">
-//             {/* Responsive ladder rails */}
-//             <div className="hidden md:block absolute left-1/2 -ml-20 w-3 h-full bg-gradient-to-r from-amber-700 to-amber-800 rounded-full dark:from-amber-900 dark:to-amber-950" />
-//             <div className="hidden md:block absolute left-1/2 ml-20 w-3 h-full bg-gradient-to-r from-amber-700 to-amber-800 rounded-full dark:from-amber-900 dark:to-amber-950" />
-
-//             {/* Mobile vertical rail */}
-//             <div className="md:hidden absolute left-1/2 -ml-1.5 w-3 h-full bg-gradient-to-b from-amber-700 to-amber-800 rounded-full dark:from-amber-900 dark:to-amber-950" />
-
-//             {/* Timeline items */}
-//             <div className="relative space-y-8">
-//               {experiences.map((exp, index) => (
-//                 <TimelineItem
-//                   key={index}
-//                   experience={exp}
-//                   isEven={index % 2 === 0}
-//                 />
-//               ))}
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Experience;

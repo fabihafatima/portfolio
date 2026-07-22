@@ -114,22 +114,18 @@ const Hero = () => {
               >
                
                 <p className="m-0 mt-3">
-                I am a Full-stack developer with 3+ years of experience at Cisco Systems,
-                building scalable observability platforms for infrastructure, application, and network monitoring. 
-                My work processes billions of data points daily, enabling real-time insights, performance optimization, 
-                and system reliability at scale
+                  I am a Full-stack developer with 3+ years of experience at Cisco Systems,
+                  building scalable observability platforms for infrastructure, application, and network monitoring.
+                  My work processes billions of data points daily, enabling real-time insights, performance optimization,
+                  and system reliability at scale.
                 </p>
                 <p className="m-0 mt-3">
-                  Now, as an <b>M.S. Computer Science</b> student at <b>UMass Amherst</b> and
-                  a Graduate Research Extern at Graphite, I am building LLM
-                  experimentation pipelines for <b>Retrieval-Augmented Generation (RAG)</b> and
-                  studying mitigation strategies to make LLM-based retrieval more reliable.
-                </p>
-                <p className="m-0 mt-3">
-                  I am also a Student Researcher at the W. E. B. Du Bois Library
-                  Data Services, engineering geospatial data pipelines that
-                  publish GeoBlacklight-compliant metadata, bridging my systems
-                  background with applied AI and data infrastructure.
+                  I recently graduated with an <b>M.S. in Computer Science</b> from{" "}
+                  <b>UMass Amherst</b> and was a Graduate Research Intern (AI Engineer)
+                  at Graphite, where I study inference-time <b>RAG collapse</b> from
+                  AI-generated content and build agentic retrieval systems to make
+                  LLM-based search more reliable. This work is co-authored in a paper
+                  submitted to EMNLP 2026 Workshop (GroundLM).
                 </p>
               </div>
             </div>
@@ -160,9 +156,9 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="bg-primary-white/0 w-[377px] h-[510px] overflow-hidden shrink-0 flex flex-col items-center justify-center min-w-[377px] max-w-full lg:flex-1 mq825:min-w-full">
+        <div className="bg-transparent w-[377px] h-[377px] overflow-hidden shrink-0 flex items-center justify-center rounded-full mq825:w-[280px] mq825:h-[280px]">
           <img
-            className="self-stretch flex-1 relative max-w-full overflow-hidden max-h-full object-contain [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-bottom] opacity-[0] lg:self-stretch lg:w-auto"
+            className="w-full h-full object-cover rounded-full [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-bottom] opacity-[0]"
             loading="eager"
             alt=""
             src={`${process.env.PUBLIC_URL}/my-image.png`}

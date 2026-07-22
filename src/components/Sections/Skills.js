@@ -118,26 +118,25 @@ const Skills = () => {
       items: [
         { label: "Java", src: `${process.env.PUBLIC_URL}/java.svg` },
         { label: "Python", src: `${process.env.PUBLIC_URL}/python.svg` },
-        { label: "JavaScript", src: `${process.env.PUBLIC_URL}/iconjavscript.svg` },
+        { label: "JavaScript", src: `${process.env.PUBLIC_URL}/iconjavscript.svg`, keepColor: true, wide: true },
         { label: "C++", src: `${process.env.PUBLIC_URL}/cpluslogo.png` },
         { label: "SQL", src: `${process.env.PUBLIC_URL}/sqllogo.png` },
-        {
-          label: "Bash",
-          src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg",
-        },
+        { label: "Bash", src: `${process.env.PUBLIC_URL}/bash.png` },
+        { label: "Scala", src: `${process.env.PUBLIC_URL}/scala.svg` },
       ],
     },
     {
       title: "Frontend",
       items: [
         { label: "React", src: `${process.env.PUBLIC_URL}/react.svg` },
-        { label: "HTML", src: `${process.env.PUBLIC_URL}/html5.svg` },
-        { label: "CSS/SASS", src: `${process.env.PUBLIC_URL}/css3.svg` },
+        { label: "HTML", src: `${process.env.PUBLIC_URL}/html5.svg`, keepColor: true },
+        { label: "CSS/SASS", src: `${process.env.PUBLIC_URL}/css3.svg`, keepColor: true },
       ],
     },
     {
       title: "Frameworks & APIs",
       items: [
+        { label: "Spring Boot", src: `${process.env.PUBLIC_URL}/springboot.svg` },
         { label: "Spring MVC", src: `${process.env.PUBLIC_URL}/springmvc.svg` },
         { label: "Node.js", src: `${process.env.PUBLIC_URL}/nodejs.svg` },
         { label: "Flask", src: `${process.env.PUBLIC_URL}/flask.png` },
@@ -155,18 +154,30 @@ const Skills = () => {
         { label: "Kafka", src: `${process.env.PUBLIC_URL}/apachekafka.svg` },
         { label: "CI/CD", src: `${process.env.PUBLIC_URL}/ci:cd.png` },
         { label: "Jenkins", src: `${process.env.PUBLIC_URL}/jenkins.svg` },
-        { label: "AWS", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
+        {
+          label: "AWS",
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+        },
+        { label: "GCP", src: `${process.env.PUBLIC_URL}/gcp.svg` },
         { label: "Nginx", src: `${process.env.PUBLIC_URL}/nginx.svg` },
+        { label: "MLflow", src: `${process.env.PUBLIC_URL}/mlflow.svg` },
+        { label: "Zabbix", src: `${process.env.PUBLIC_URL}/zabbix.svg` },
+        { label: "Airflow", src: `${process.env.PUBLIC_URL}/airflow.svg` },
       ],
     },
     {
       title: "Data & Databases",
       items: [
         { label: "MySQL", src: `${process.env.PUBLIC_URL}/mysql.svg` },
+        { label: "PostgreSQL", src: `${process.env.PUBLIC_URL}/postgresql.svg` },
         { label: "MongoDB", src: `${process.env.PUBLIC_URL}/mongodb.svg` },
+        { label: "Cassandra", src: `${process.env.PUBLIC_URL}/cassandra.svg` },
+        { label: "Redis", src: `${process.env.PUBLIC_URL}/redis.svg` },
         { label: "Elasticsearch", src: `${process.env.PUBLIC_URL}/elastic-search.svg` },
         { label: "Kibana", src: `${process.env.PUBLIC_URL}/kibana.svg` },
         { label: "Logstash", src: `${process.env.PUBLIC_URL}/logstash.svg` },
+        { label: "BigQuery", src: `${process.env.PUBLIC_URL}/bigquery.svg` },
+        { label: "Spark", src: `${process.env.PUBLIC_URL}/spark.svg` },
         { label: "Tableau", src: `${process.env.PUBLIC_URL}/tableau.png` },
         { label: "Git", src: `${process.env.PUBLIC_URL}/Github.svg` },
       ],
@@ -180,8 +191,21 @@ const Skills = () => {
         { label: "Pandas", src: `${process.env.PUBLIC_URL}/pandas.svg` },
         { label: "NumPy", src: `${process.env.PUBLIC_URL}/numpy.svg` },
         { label: "Transformers", src: `${process.env.PUBLIC_URL}/trasformers.png` },
+        { label: "Hugging Face", src: `${process.env.PUBLIC_URL}/huggingface.svg` },
+        { label: "XGBoost", src: `${process.env.PUBLIC_URL}/xgboost.svg` },
+        { label: "LightGBM", src: `${process.env.PUBLIC_URL}/lightgbm.svg` },
+        { label: "Agentic AI", src: `${process.env.PUBLIC_URL}/agentic-ai.svg` },
         { label: "RAG", src: `${process.env.PUBLIC_URL}/RAG.png` },
         { label: "LLM-based", src: `${process.env.PUBLIC_URL}/llm_ai.png` },
+      ],
+    },
+    {
+      title: "LLM Infrastructure",
+      items: [
+        { label: "vLLM", src: `${process.env.PUBLIC_URL}/vllm.svg` },
+        { label: "SLURM", src: `${process.env.PUBLIC_URL}/slurm.svg` },
+        { label: "LangChain", src: `${process.env.PUBLIC_URL}/langchain.svg` },
+        { label: "LangGraph", src: `${process.env.PUBLIC_URL}/langgraph.svg` },
       ],
     },
     {
@@ -290,6 +314,8 @@ const Skills = () => {
                             animateOnScroll={false}
                             backgroundColor={sectionBackgroundColor}
                             compact={compact}
+                            keepColor={item.keepColor}
+                            wide={item.wide}
                           />
                         ))}
                       </div>

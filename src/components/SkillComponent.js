@@ -1,10 +1,12 @@
 import React from "react";
 
-const Skill = ({ src, label, animateOnScroll, backgroundColor, compact }) => {
-  const cardClasses = compact
+const Skill = ({ src, label, animateOnScroll, backgroundColor, compact, keepColor, wide }) => {
+  const cardClasses = wide
+    ? "w-[96px] h-[102px] py-2.5 px-2 gap-[7px]"
+    : compact
     ? "w-[76px] h-[102px] py-2.5 px-2 gap-[7px]"
     : "w-[88px] h-[110px] py-3 px-2 gap-[8px]";
-  const iconClasses = compact ? "w-10 h-10" : "w-12 h-12";
+  const iconClasses = compact || wide ? "w-10 h-10" : "w-12 h-12";
 
   return (
     <div
@@ -16,7 +18,9 @@ const Skill = ({ src, label, animateOnScroll, backgroundColor, compact }) => {
     >
       {src ? (
         <img
-          className={`relative overflow-hidden shrink-0 object-contain ${iconClasses}`}
+          className={`relative overflow-hidden shrink-0 object-contain ${
+            keepColor ? "" : "brightness-0"
+          } ${iconClasses}`}
           loading="eager"
           alt={label}
           src={src}
@@ -24,7 +28,11 @@ const Skill = ({ src, label, animateOnScroll, backgroundColor, compact }) => {
       ) : (
         <div className="w-10 h-10 rounded-lg border border-primary-black/10 bg-primary-white/20" />
       )}
-      <span className="self-stretch relative text-[11px] font-medium tracking-[-0.01em] leading-[15px] text-center break-words px-1 mq450:text-[10px] mq450:leading-[13px]">
+      <span
+        className={`self-stretch relative text-[11px] font-medium tracking-[-0.01em] leading-[15px] text-center px-0.5 mq450:text-[10px] mq450:leading-[13px] ${
+          wide ? "whitespace-nowrap" : "break-words"
+        }`}
+      >
         {label}
       </span>
     </div>

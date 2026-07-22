@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#F8F9FA"/>
+  <circle cx="32" cy="32" r="14" fill="none" stroke="#EA4335" stroke-width="4"/>
+  <circle cx="32" cy="32" r="14" fill="none" stroke="#4285F4" stroke-width="4" stroke-dasharray="22 66" stroke-dashoffset="8"/>
+  <circle cx="32" cy="32" r="14" fill="none" stroke="#FBBC04" stroke-width="4" stroke-dasharray="22 66" stroke-dashoffset="30"/>
+  <circle cx="32" cy="32" r="14" fill="none" stroke="#34A853" stroke-width="4" stroke-dasharray="22 66" stroke-dashoffset="52"/>
+  <text x="32" y="37" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="700" fill="#5F6368">GCP</text>
+</svg>
